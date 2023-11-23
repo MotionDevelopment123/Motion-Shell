@@ -1,5 +1,5 @@
 # Motion-Shell
-### development
+### Alpha Version 1.0.0.0
 
 Motion-Shell is a replacement shell tool aimed at turning Windows into a expierance closer to a gaming console.
 
