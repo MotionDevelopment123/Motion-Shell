@@ -1,0 +1,30 @@
+@ECHO OFF
+REM BFCPEOPTIONSTART
+REM Advanced BAT to EXE Converter www.BatToExeConverter.com
+REM BFCPEEXE=C:\Shared Folder\GitHub\playnite-shell\Splash-Shell.exe
+REM BFCPEICON=C:\Program Files (x86)\Advanced BAT to EXE Converter PRO v4.61\ab2econv461pro\icons\icon13.ico
+REM BFCPEICONINDEX=-1
+REM BFCPEEMBEDDISPLAY=0
+REM BFCPEEMBEDDELETE=1
+REM BFCPEADMINEXE=0
+REM BFCPEINVISEXE=0
+REM BFCPEVERINCLUDE=1
+REM BFCPEVERVERSION=1.0.0.0
+REM BFCPEVERPRODUCT=Playnite-Shell Splash Screen
+REM BFCPEVERDESC=Motion Development
+REM BFCPEVERCOMPANY=Motion Development
+REM BFCPEVERCOPYRIGHT=
+REM BFCPEWINDOWCENTER=1
+REM BFCPEDISABLEQE=0
+REM BFCPEWINDOWHEIGHT=30
+REM BFCPEWINDOWWIDTH=120
+REM BFCPEWTITLE=Playnite-Shell Splash Screen
+REM BFCPEOPTIONEND
+CD C:\Playnite-Shell
+set /p SIZE=<SCREENSIZE.PIXELS
+set /p VIDEO=<VIDEO.LOCATION
+set /p PLAYNITE=<Playnite.LOCATION
+set /p FFPLAY=<FFPLAY.LOCATION
+start "" "%PLAYNITE%Playnite.FullscreenApp.exe" --hidesplashscreen
+start "" "%FFPLAY%" -left 0 -top 0 %SIZE% -alwaysontop -noborder -autoexit -loglevel quiet -loop 1 "%VIDEO%" 2>NUL
+EXIT
