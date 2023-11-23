@@ -21,13 +21,16 @@ REM BFCPEWINDOWWIDTH=120
 REM BFCPEWTITLE=Playnite-Shell Settings
 REM BFCPEOPTIONEND
 @ECHO OFF
-CD C:\Playnite-Shell
+CD "C:\Motion Development\Playnite-Shell\"
+set /p VERSION=<PLAYNITE-SHELL.VERSION
 set /p PLAYNITE=<Playnite.LOCATION
 set /p FFPLAY=<FFPLAY.LOCATION
 set /p SIZE=<SCREENSIZE.PIXELS
 set /p VIDEO=<VIDEO.LOCATION
 
-
+ECHO Playnite-Shell Settings
+ECHO Version: %VERSION%
+ECHO.
 
 ECHO If this is your first time running the program please select option 1
 ECHO.
