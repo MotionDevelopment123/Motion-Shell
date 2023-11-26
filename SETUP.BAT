@@ -24,6 +24,8 @@ REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Steam\Motion-Shell-Steam.exe
 REM BFCPEOPTIONEND
 @ECHO OFF
 
+Set /P Header=>Header.txt
+
 :Welcome
 ECHO Welcome to Motion-Shell Setup
 ECHO.
@@ -36,6 +38,7 @@ ECHO.
 ECHO.
 
 CLS
+ECHO %Header%
 
 ECHO Please select which program you would like to set as the Shell:
 ECHO.
