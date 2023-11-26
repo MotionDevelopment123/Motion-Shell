@@ -1,7 +1,7 @@
 @ECHO OFF
 REM BFCPEOPTIONSTART
 REM Advanced BAT to EXE Converter www.BatToExeConverter.com
-REM BFCPEEXE=C:\Shared Folder\GitHub\Motion-Shell\Playnite\Playnite-Setup.exe
+REM BFCPEEXE=C:\Shared Folder\GitHub\Motion-Shell\Playnite\Motion-Shell-Playnite.exe
 REM BFCPEICON=C:\Program Files (x86)\Advanced BAT to EXE Converter PRO v4.61\ab2econv461pro\icons\icon12.ico
 REM BFCPEICONINDEX=-1
 REM BFCPEEMBEDDISPLAY=0
@@ -10,8 +10,8 @@ REM BFCPEADMINEXE=0
 REM BFCPEINVISEXE=0
 REM BFCPEVERINCLUDE=1
 REM BFCPEVERVERSION=1.0.0.0
-REM BFCPEVERPRODUCT=Motion-Shell Setup - Playnite
-REM BFCPEVERDESC=Motion-Shell Setup - Playnite
+REM BFCPEVERPRODUCT=Motion-Shell Setup
+REM BFCPEVERDESC=Motion-Shell Setup
 REM BFCPEVERCOMPANY=Motion Development
 REM BFCPEVERCOPYRIGHT=
 REM BFCPEWINDOWCENTER=1
@@ -26,9 +26,11 @@ REM BFCPEEMBED=C:\Shared Folder\GitHub\playnite-shell\Playnite\SCREENSIZE.PIXELS
 REM BFCPEEMBED=C:\Shared Folder\GitHub\playnite-shell\Playnite\Splash-Shell.exe
 REM BFCPEEMBED=C:\Shared Folder\GitHub\playnite-shell\Playnite\VIDEO.LOCATION
 REM BFCPEEMBED=C:\Shared Folder\GitHub\playnite-shell\Playnite\Windows-Shell.exe
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Header.txt
 REM BFCPEOPTIONEND
 @ECHO OFF
-ECHO Motion-Shell - Playnite
+type %MYFILES%\Header.txt
+ECHO.
 ECHO.
 ECHO Installing...
 ECHO.
@@ -40,10 +42,20 @@ md Motion-Shell
 CD C:\Motion-Shell
 md Playnite
 CD C:\Motion-Shell\Playnite
-copy %MYFILES%\*.* C:\Motion-Shell\Playnite
+copy %MYFILES%\Splash-Shell.exe C:\Motion-Shell\Playnite
+copy %MYFILES%\Windows-Shell.exe C:\Motion-Shell\Playnite
+copy %MYFILES%\config-Script.ps1 C:\Motion-Shell\Playnite
+copy %MYFILES%\PLAYNITE.LOCATION C:\Motion-Shell\Playnite
+copy %MYFILES%\FFPLAY.LOCATION C:\Motion-Shell\Playnite
+copy %MYFILES%\SCREENSIZE.PIXELS C:\Motion-Shell\Playnite
+copy %MYFILES%\VIDEO.LOCATION C:\Motion-Shell\Playnite
 goto locations
 
 :locations
+CLS
+type %MYFILES%\Header.txt
+ECHO.
+ECHO.
 ECHO Please select your Playnite installation folder
 rem BrowseFolder
 ECHO|set /p=%result%>Playnite.LOCATION
@@ -51,8 +63,11 @@ ECHO Playnite install folder set to: %result%
 ECHO.
 ECHO.
 
-
-ECHO FFPLAY Location
+CLS
+type %MYFILES%\Header.txt
+ECHO.
+ECHO.
+ECHO Please select your FFPLAY.exe Location
 ECHO.
 ECHO	NOTE: FFPLAY.EXE can be downloaded from: https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip
 rem BrowseFiles
@@ -62,7 +77,10 @@ ECHO FFPLAY.exe set to: %result%
 ECHO.
 ECHO.
 
-
+CLS
+type %MYFILES%\Header.txt
+ECHO.
+ECHO.
 ECHO Screen size:
 ECHO.
 ECHO width (in pixels)
@@ -74,10 +92,14 @@ ECHO.
 set /p SIZE=-x %WIDTH% -y %HEIGHT%
 ECHO|set /p=%SIZE%>SCREENSIZE.PIXELS
 ECHO.
-ECHO size set to: %HEIGHT% X %WIDTH%
+ECHO size set to: %WIDTH% X %HEIGHT%
 ECHO.
 ECHO.
 
+CLS
+type %MYFILES%\Header.txt
+ECHO.
+ECHO.
 ECHO Splash Video
 ECHO.
 set /p VIDEO=Video location:
@@ -92,13 +114,12 @@ goto misc
 
 :misc
 CLS
-ECHO Motion-Shell - Playnite
+type %MYFILES%\Header.txt
+ECHO.
 ECHO.
 ECHO Installing...
 ECHO.
 ECHO.
-
-ECHO Installing...
 
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "C:\Motion-Shell\Playnite\Splash-Shell.exe" /f
 
@@ -108,7 +129,9 @@ goto complete
 
 :complete
 CLS
-
+type %MYFILES%\Header.txt
+ECHO.
+ECHO.
 ECHO Motion-Shell is now installed and set as the Shell to launch Playnite with your splash video and when closed run will launch the Windows Shell
 ECHO.
 ECHO For help and more information please visit: https://sites.google.com/view/motion-shell/
