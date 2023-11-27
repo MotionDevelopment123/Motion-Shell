@@ -30,7 +30,7 @@ type %MYFILES%\Welcome.txt
 ECHO.
 ECHO 1. Steam
 ECHO 2. Playnite Splash (Has support for a custom launch video)
-ECHO 3. Playnite (Without splash coming soon)
+ECHO 3. Playnite
 ECHO 4. Custom (COMING SOON!)
 ECHO 5. Exit
 ECHO.
