@@ -19,10 +19,10 @@ REM BFCPEDISABLEQE=0
 REM BFCPEWINDOWHEIGHT=30
 REM BFCPEWINDOWWIDTH=120
 REM BFCPEWTITLE=Motion-Shell Setup
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\Motion-Shell-Playnite.exe
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Steam\Motion-Shell-Steam.exe
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Header.txt
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Welcome.txt
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\Setup\Motion-Shell-Playnite.exe
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Steam\Setup\Motion-Shell-Steam.exe
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Header.txt
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Welcome.txt
 REM BFCPEOPTIONEND
 @ECHO OFF
 :Welcome

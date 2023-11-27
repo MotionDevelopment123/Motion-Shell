@@ -19,13 +19,13 @@ REM BFCPEDISABLEQE=0
 REM BFCPEWINDOWHEIGHT=30
 REM BFCPEWINDOWWIDTH=120
 REM BFCPEWTITLE=Motion-Shell Setup
-REM BFCPEEMBED=C:\Shared Folder\GitHub\SDL\SDL\CLOSED.LOCATION
-REM BFCPEEMBED=C:\Shared Folder\GitHub\SDL\SDL\ICON.ico
-REM BFCPEEMBED=C:\Shared Folder\GitHub\SDL\SDL\Return To Gaming Mode.exe
-REM BFCPEEMBED=C:\Shared Folder\GitHub\SDL\SDL\Return To Gaming Mode.lnk
-REM BFCPEEMBED=C:\Shared Folder\GitHub\SDL\SDL\SDL.exe
-REM BFCPEEMBED=C:\Shared Folder\GitHub\SDL\SDL\STEAM.LOCATION
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Header.txt
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Steam\CLOSED.LOCATION
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Steam\ICON.ico
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Steam\Return To Gaming Mode.exe
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Steam\Return To Gaming Mode.lnk
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Steam\Motion-Shell.exe
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Steam\STEAM.LOCATION
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Header.txt
 REM BFCPEOPTIONEND
 @ECHO OFF
 type %MYFILES%\Header.txt
@@ -38,11 +38,11 @@ CD C:\Motion-Shell
 md Steam
 CD C:\Motion-Shell\Steam
 copy %MYFILES%\ICON.ico C:\Motion-Shell\Steam
-copy %MYFILES%\SDL.exe C:\Motion-Shell\Steam
+copy %MYFILES%\Motion-Shell.exe C:\Motion-Shell\Steam
 copy %MYFILES%\"Return To Gaming Mode".* C:\Motion-Shell\Steam
 copy %MYFILES%\STEAM.LOCATION C:\Motion-Shell\Steam
 copy %MYFILES%\CLOSED.LOCATION C:\Motion-Shell\Steam
-
+copy %MYFILES%\"Return To Gaming Mode".lnk Desktop
 CLS
 type %MYFILES%\Header.txt
 ECHO.
