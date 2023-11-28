@@ -65,6 +65,8 @@ CLS
 type %MYFILES%\Header.txt
 ECHO This is coming soon!
 ECHO.
+START %MYFILES%\Motion-Shell-Playnite-NoSplash.exe
+
 GOTO Welcome
 
 :custom

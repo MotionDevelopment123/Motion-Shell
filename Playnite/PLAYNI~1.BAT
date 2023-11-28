@@ -1,7 +1,7 @@
 @ECHO OFF
 REM BFCPEOPTIONSTART
 REM Advanced BAT to EXE Converter www.BatToExeConverter.com
-REM BFCPEEXE=C:\Shared Folder\GitHub\playnite-shell\Playnite\Splash-Shell.exe
+REM BFCPEEXE=C:\Shared Folder\GitHub\Motion-Shell\Playnite\Motion-Shell.exe
 REM BFCPEICON=C:\Program Files (x86)\Advanced BAT to EXE Converter PRO v4.61\ab2econv461pro\icons\icon3.ico
 REM BFCPEICONINDEX=-1
 REM BFCPEEMBEDDISPLAY=0
