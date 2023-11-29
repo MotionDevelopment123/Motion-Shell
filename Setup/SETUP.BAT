@@ -1,7 +1,7 @@
 @ECHO OFF
 REM BFCPEOPTIONSTART
 REM Advanced BAT to EXE Converter www.BatToExeConverter.com
-REM BFCPEEXE=C:\Shared Folder\GitHub\Motion-Shell\Motion-Shell Setup.exe
+REM BFCPEEXE=C:\Shared Folder\GitHub\Motion-Shell\Setup\Motion-Shell Setup.exe
 REM BFCPEICON=C:\Program Files (x86)\Advanced BAT to EXE Converter PRO v4.61\ab2econv461pro\icons\icon12.ico
 REM BFCPEICONINDEX=-1
 REM BFCPEEMBEDDISPLAY=0
@@ -19,10 +19,11 @@ REM BFCPEDISABLEQE=0
 REM BFCPEWINDOWHEIGHT=30
 REM BFCPEWINDOWWIDTH=120
 REM BFCPEWTITLE=Motion-Shell Setup
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\Setup\Motion-Shell-Playnite.exe
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Steam\Setup\Motion-Shell-Steam.exe
 REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Header.txt
 REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Welcome.txt
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Playnite\Motion-Shell-Playnite.exe
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Playnite\Motion-Shell-Playnite-Splash.exe
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Steam\Motion-Shell-Steam.exe
 REM BFCPEOPTIONEND
 @ECHO OFF
 :Welcome
@@ -54,18 +55,13 @@ GOTO end
 :Playnite-Splash
 CLS
 type %MYFILES%\Header.txt
-ECHO.
-ECHO.
-ECHO Installing...
-START %MYFILES%\Motion-Shell-Playnite.exe
+START %MYFILES%\Motion-Shell-Playnite-Splash.exe
 GOTO end
 
 :Playnite
 CLS
 type %MYFILES%\Header.txt
-ECHO This is coming soon!
-ECHO.
-START %MYFILES%\Motion-Shell-Playnite-NoSplash.exe
+START %MYFILES%\Motion-Shell-Playnite.exe
 
 GOTO Welcome
 

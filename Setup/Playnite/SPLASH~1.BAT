@@ -1,7 +1,7 @@
 @ECHO OFF
 REM BFCPEOPTIONSTART
 REM Advanced BAT to EXE Converter www.BatToExeConverter.com
-REM BFCPEEXE=C:\Shared Folder\GitHub\Motion-Shell\Playnite\Motion-Shell-Playnite.exe
+REM BFCPEEXE=C:\Shared Folder\GitHub\Motion-Shell\Setup\Playnite\Motion-Shell-Playnite-Splash.exe
 REM BFCPEICON=C:\Program Files (x86)\Advanced BAT to EXE Converter PRO v4.61\ab2econv461pro\icons\icon12.ico
 REM BFCPEICONINDEX=-1
 REM BFCPEEMBEDDISPLAY=0
@@ -19,14 +19,14 @@ REM BFCPEDISABLEQE=0
 REM BFCPEWINDOWHEIGHT=30
 REM BFCPEWINDOWWIDTH=120
 REM BFCPEWTITLE=Motion-Shell Setup
-REM BFCPEEMBED=C:\Shared Folder\GitHub\playnite-shell\Playnite\config-Script.PS1
-REM BFCPEEMBED=C:\Shared Folder\GitHub\playnite-shell\Playnite\FFPLAY.LOCATION
-REM BFCPEEMBED=C:\Shared Folder\GitHub\playnite-shell\Playnite\PLAYNITE.LOCATION
-REM BFCPEEMBED=C:\Shared Folder\GitHub\playnite-shell\Playnite\SCREENSIZE.PIXELS
-REM BFCPEEMBED=C:\Shared Folder\GitHub\playnite-shell\Playnite\Splash-Shell.exe
-REM BFCPEEMBED=C:\Shared Folder\GitHub\playnite-shell\Playnite\VIDEO.LOCATION
-REM BFCPEEMBED=C:\Shared Folder\GitHub\playnite-shell\Playnite\Windows-Shell.exe
 REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Header.txt
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\config-Script.PS1
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\FFPLAY.LOCATION
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\Motion-Shell.exe
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\PLAYNITE.LOCATION
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\SCREENSIZE.PIXELS
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\VIDEO.LOCATION
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\Windows-Shell.exe
 REM BFCPEOPTIONEND
 @ECHO OFF
 type %MYFILES%\Header.txt
