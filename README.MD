@@ -10,7 +10,7 @@ Motion-Shell is a replacement shell tool aimed at turning Windows into a expiera
   -Playnite without a splash video.
 
 This is a Beta release, some features are missing such as:
-~~- ~~Uninstaller~~ Initial version included with beta 3
+- ~~Uninstaller~~ Initial version included with beta 3
 - Settings
 
 May look at implementing an updater in a future release
