@@ -24,6 +24,7 @@ REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Welcome.txt
 REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Playnite\Motion-Shell-Playnite.exe
 REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Playnite\Motion-Shell-Playnite-Splash.exe
 REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Steam\Motion-Shell-Steam.exe
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Custom\Motion-Shell-Custom.exe
 REM BFCPEOPTIONEND
 @ECHO OFF
 :Welcome
@@ -32,7 +33,7 @@ ECHO.
 ECHO 1. Steam
 ECHO 2. Playnite Splash (Has support for a custom launch video)
 ECHO 3. Playnite
-ECHO 4. Custom (COMING SOON!)
+ECHO 4. Custom
 ECHO 5. Exit
 ECHO.
 ECHO.
@@ -45,32 +46,24 @@ if "%op%"=="5" goto end
 
 :Steam
 CLS
-type %MYFILES\Header.txt
-ECHO.
-ECHO.
-ECHO Installing...
 START %MYFILES%\Motion-Shell-Steam.exe
 GOTO end
 
 :Playnite-Splash
 CLS
-type %MYFILES%\Header.txt
 START %MYFILES%\Motion-Shell-Playnite-Splash.exe
 GOTO end
 
 :Playnite
 CLS
-type %MYFILES%\Header.txt
 START %MYFILES%\Motion-Shell-Playnite.exe
 
-GOTO Welcome
+GOTO end
 
 :custom
 CLS
-type %MYFILES%\Header.txt
-ECHO This is coming soon!
-ECHO.
-GOTO Welcome
+START %MYFILES%\Motion-Shell-Custom.exe
+GOTO end
 
 :end
 Exit

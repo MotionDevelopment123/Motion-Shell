@@ -11,8 +11,8 @@ Version 1.0.0.0 Beta 4
 
 Thank you for choosing to use Motion Shell, please take a few moments to read the following:
 
-Motion Shell is a program to replace the default Windows Shell with a different program and restores the default Windows Shell once closed, creating a seperate gaming mode from desktop mode.
+Motion Shell is a program to replace the default Windows Shell with a different program and restores the default Windows Shell once closed, creating a separate gaming mode from desktop mode.
 
-Motion Shell does not inlcude Steam or Playnite, please download and install them from their respective official source before continuing with this installer.
+Motion Shell does not include Steam or Playnite, please download and install them from their respective official source before continuing with this installer.
 
 Please select which version of Motion-Shell you would like to set up:

@@ -1,7 +1,7 @@
 @ECHO OFF
 REM BFCPEOPTIONSTART
 REM Advanced BAT to EXE Converter www.BatToExeConverter.com
-REM BFCPEEXE=C:\Shared Folder\GitHub\Motion-Shell\Setup\Steam\Motion-Shell-Steam.exe
+REM BFCPEEXE=C:\Shared Folder\GitHub\Motion-Shell\Setup\Custom\Motion-Shell-Custom.exe
 REM BFCPEICON=C:\Program Files (x86)\Advanced BAT to EXE Converter PRO v4.61\ab2econv461pro\icons\icon12.ico
 REM BFCPEICONINDEX=-1
 REM BFCPEEMBEDDISPLAY=0
@@ -19,13 +19,13 @@ REM BFCPEDISABLEQE=0
 REM BFCPEWINDOWHEIGHT=30
 REM BFCPEWINDOWWIDTH=120
 REM BFCPEWTITLE=Motion-Shell Setup
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Steam\CLOSED.LOCATION
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Steam\ICON.ico
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Steam\Return To Gaming Mode.exe
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Steam\Return To Gaming Mode.lnk
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Steam\Motion-Shell.exe
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Steam\STEAM.LOCATION
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Custom\CLOSED.LOCATION
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Custom\EXENAME.LOCATION
 REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Header.txt
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Custom\Return To Gaming Mode.exe
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Custom\Return To Gaming Mode.lnk
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Custom\Motion-Shell.exe
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Custom\CUSTOM.LOCATION
 REM BFCPEOPTIONEND
 @ECHO OFF
 type %MYFILES%\Header.txt
@@ -35,21 +35,25 @@ ECHO Installing...
 CD C:\
 md Motion-Shell
 CD C:\Motion-Shell
-md Steam
-CD C:\Motion-Shell\Steam
-copy %MYFILES%\ICON.ico C:\Motion-Shell\Steam
-copy %MYFILES%\Motion-Shell.exe C:\Motion-Shell\Steam
-copy %MYFILES%\"Return To Gaming Mode".* C:\Motion-Shell\Steam
-copy %MYFILES%\STEAM.LOCATION C:\Motion-Shell\Steam
-copy %MYFILES%\CLOSED.LOCATION C:\Motion-Shell\Steam
+md Custom
+CD C:\Motion-Shell\Custom
+copy %MYFILES%\EXENAME.LOCATION C:\Motion-Shell\Custom
+copy %MYFILES%\Motion-Shell.exe C:\Motion-Shell\Custom
+copy %MYFILES%\"Return To Gaming Mode".* C:\Motion-Shell\Custom
+copy %MYFILES%\CUSTOM.LOCATION C:\Motion-Shell\Custom
+copy %MYFILES%\CLOSED.LOCATION C:\Motion-Shell\Custom
 copy %MYFILES%\"Return To Gaming Mode".lnk Desktop
 CLS
 type %MYFILES%\Header.txt
 ECHO.
 ECHO.
-ECHO Please select your Steam.exe
+ECHO Please select your custom shell program
 rem BrowseFiles
-ECHO|set /p=%result%>STEAM.LOCATION
+ECHO|set /p=%result%>CUSTOM.LOCATION
+ECHO.
+ECHO Please type the .EXE name of the custom shell program including the .exe (EG: Notepad.exe or Chrome.exe)
+set /p SHELLEXE=Program file name:
+ECHO|set /p=%SHELLEXE%>EXENAME.LOCATION
 
 CLS
 type %MYFILES%\Header.txt
@@ -60,7 +64,7 @@ ECHO 1. Launch Windows Shell (default)
 ECHO 2. Logout (recommened)
 ECHO 3. Launch custom program
 
-set /p EXITop=Select what you would like to happen when you close Steam:
+set /p EXITop=Select what you would like to happen when you close your shell program:
 
 if "%EXITop%"=="1" goto EXITop1
 if "%EXITop%"=="2" goto EXITop2
@@ -88,7 +92,7 @@ type %MYFILES%\Header.txt
 ECHO.
 ECHO Installing...
 
-reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "C:\Motion-Shell\Steam\Motion-Shell.exe" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "C:\Motion-Shell\Custom\Motion-Shell.exe" /f
 
 goto complete
 
