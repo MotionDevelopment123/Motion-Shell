@@ -7,13 +7,12 @@ $$ |\$  /$$ |$$ |  $$ | $$ |$$\ $$ |$$ |  $$ |$$ |  $$ |       $$\   $$ |$$ |  $
 $$ | \_/ $$ |\$$$$$$  | \$$$$  |$$ |\$$$$$$  |$$ |  $$ |       \$$$$$$  |$$ |  $$ |\$$$$$$$\ $$ |$$ |
 \__|     \__| \______/   \____/ \__| \______/ \__|  \__|        \______/ \__|  \__| \_______|\__|\__|
 
-Version 1.0.0.0 Beta 2
+Version 1.0.0.0 Beta 4
 
+Thank you for choosing to use Motion Shell, please take a few moments to read the following:
 
-Thank you for choosing to use Motion-Shell, please take a few moments to read the following:
+Motion Shell is a program to replace the default Windows Shell with a different program and restores the default Windows Shell once closed, creating a seperate gaming mode from desktop mode.
 
-Please ensure this script is running as the user logged in, if the account doesnt have admin privlages but it is requested the script will run on the account that has authenticated the rights, please enable admin rights for the initial install and turn them back off after if desired.
-
-It is recommended to use a secondary account instead of your primary account.
+Motion Shell does not inlcude Steam or Playnite, please download and install them from their respective official source before continuing with this installer.
 
 Please select which version of Motion-Shell you would like to set up:
