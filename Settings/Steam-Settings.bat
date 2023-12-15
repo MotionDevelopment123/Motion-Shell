@@ -66,7 +66,7 @@ ECHO|set /p=%result%>CLOSED.LOCATION
 goto Start
 
 :Set-Shell
-reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "C:\Motion-Shell\Steam\Motion-Shell.exe" /f
+call %MYFILES%\set-Shell.bat
 goto Start
 
 

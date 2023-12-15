@@ -28,4 +28,4 @@ Call %MYFILES%\Custom-Settings.bat
 GOTO end
 
 :end
-Exit
+exit
