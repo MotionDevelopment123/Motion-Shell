@@ -32,7 +32,8 @@ ECHO|set /p=%CURRENT%>CURRENT.OPTION
 goto end
 
 :Playnite
-reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "C:\Motion-Shell\Playnite\Motion-Shell.exe" /f
+set /p=PLAYNITE<PLAYNITE.LOCATION
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "%PLAYNITE%" /f
 set /p CURRENT=Playnite
 ECHO|set /p=%CURRENT%>CURRENT.OPTION
 goto end
@@ -44,4 +45,4 @@ ECHO|set /p=%CURRENT%>CURRENT.OPTION
 goto end
 
 :end
-Exit
+CALL %MYFILES\Settings.bat
