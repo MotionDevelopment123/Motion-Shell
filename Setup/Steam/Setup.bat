@@ -89,6 +89,9 @@ ECHO.
 ECHO Installing...
 
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "C:\Motion-Shell\Steam\Motion-Shell.exe" /f
+set /p CURRENT=Steam
+ECHO|set /p=%CURRENT%>CURRENT.OPTION
+
 
 goto complete
 
