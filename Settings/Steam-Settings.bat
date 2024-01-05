@@ -12,7 +12,7 @@ ECHO 2. Closing action
 type C:\Motion-Shell\Steam\CLOSED.LOCATION
 ECHO.
 ECHO 3. Set as current shell
-ECHO 4. Install another module
+ECHO 4. 
 ECHO 5. Exit
 ECHO.
 ECHO.

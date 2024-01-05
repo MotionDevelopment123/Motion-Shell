@@ -23,12 +23,14 @@ if "%op%"=="5" goto end
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "C:\Motion-Shell\Steam\Motion-Shell.exe" /f
 set /p CURRENT=Steam
 ECHO|set /p=%CURRENT%>CURRENT.OPTION
+START C:\Motion-Shell\Motion-Settings.exe
 goto end
 
 :Playnite-Splash
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "C:\Motion-Shell\Playnite\Motion-Shell.exe" /f
 set /p CURRENT=Playnite-Splash
 ECHO|set /p=%CURRENT%>CURRENT.OPTION
+START C:\Motion-Shell\Motion-Settings.exe
 goto end
 
 :Playnite
@@ -36,13 +38,15 @@ set /p=PLAYNITE<PLAYNITE.LOCATION
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "%PLAYNITE%" /f
 set /p CURRENT=Playnite
 ECHO|set /p=%CURRENT%>CURRENT.OPTION
+START C:\Motion-Shell\Motion-Settings.exe
 goto end
 
 :Custom
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "C:\Motion-Shell\Custom\Motion-Shell.exe" /f
 set /p CURRENT=Custom
 ECHO|set /p=%CURRENT%>CURRENT.OPTION
+START C:\Motion-Shell\Motion-Settings.exe
 goto end
 
 :end
-CALL %MYFILES\Settings.bat
+EXIT
