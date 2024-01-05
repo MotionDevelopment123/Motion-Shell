@@ -11,8 +11,6 @@ Motion-Shell is a replacement shell tool aimed at turning Windows into a expiera
 - Custom Shell
   - Allows you to select a custom exe program that will launch as the shell and once closed will launch the Windows-Shell or alternative action such as signing out the account.
 
-This is a Beta release, some features are missing such as:
-- ~~Uninstaller~~ Initial version included with beta 3
-- ~~Settings~~ Initial version included in Version 1.0.0.0
-
-May look at implementing an updater in a future release
+#### Settings
+- Version 1.0.0.0 will include a initial beta version of settings
+ - Will be out of beta in version 1.1.0.0
