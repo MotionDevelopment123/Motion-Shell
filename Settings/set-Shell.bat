@@ -1,4 +1,5 @@
 @ECHO OFF
+CD C:\Motion-Shell\
 set /p CURRENT=<CURRENT.OPTION
 ECHO The shell is currently set to %CURRENT%
 ECHO.

@@ -25,8 +25,16 @@ REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Playnite\Motion-Shell-
 REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Playnite\Motion-Shell-Playnite-Splash.exe
 REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Steam\Motion-Shell-Steam.exe
 REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Custom\Motion-Shell-Custom.exe
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Settings\CURRENT.OPTION
+REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Settings\Motion-Settings.exe
 REM BFCPEOPTIONEND
 @ECHO OFF
+:PRESETUP
+CD C:\
+md Motion-Shell
+CD C:\Motion-Shell
+copy %MYFILES%\Motion-Settings.exe
+copy %MYFILES%\CURRENT.OPTION
 :Welcome
 type %MYFILES%\Welcome.txt
 ECHO.

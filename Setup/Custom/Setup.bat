@@ -32,8 +32,6 @@ type %MYFILES%\Header.txt
 ECHO.
 ECHO Installing...
 
-CD C:\
-md Motion-Shell
 CD C:\Motion-Shell
 md Custom
 CD C:\Motion-Shell\Custom

@@ -37,8 +37,6 @@ ECHO.
 ECHO.
 
 @ECHO OFF
-CD C:\
-md Motion-Shell
 CD C:\Motion-Shell
 md Playnite
 CD C:\Motion-Shell\Playnite
