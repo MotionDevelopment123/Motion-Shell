@@ -1,6 +1,7 @@
 @ECHO OFF
+CD C:\Motion-Shell\Custom
 :Start
-type %MYFILES%\Header.txt
+type C:\Motion-Shell\Settings\Header.txt
 ECHO.
 ECHO.
 ECHO Custom settings
@@ -11,21 +12,19 @@ ECHO.
 ECHO 2. Closing action
 type C:\Motion-Shell\CUSTOM\CLOSED.LOCATION
 ECHO.
-ECHO 3. Set as current shell
-ECHO 4. Install another module
-ECHO 5. Exit
+ECHO 3. Change Shell
+ECHO 4. Exit
 ECHO.
 ECHO.
 set /p op=Please select:
 if "%op%"=="1" goto CUSTOM-Location
 if "%op%"=="2" goto Closing
 if "%op%"=="3" goto Set-Shell
-if "%op%"=="4" goto Module
-if "%op%"=="5" goto end
+if "%op%"=="4" goto end
 
-:Steam-Location
+:CUSTOM-Location
 CLS
-type %MYFILES%\Header.txt
+type C:\Motion-Shell\Settings\Header.txt
 ECHO.
 ECHO.
 ECHO Please select your custom.exe
@@ -35,7 +34,7 @@ goto Start
 
 :Closing
 CLS
-type %MYFILES%\Header.txt
+type C:\Motion-Shell\Settings\Header.txt
 ECHO.
 ECHO.
 
@@ -60,20 +59,14 @@ ECHO|set /p=%EXITaction%>CLOSED.LOCATION
 goto Start
 
 :EXITop3
-ECHO Please select the program you would like to be run at when your shell program is closed (if you would like to add launch paramaters you can open the CLOSED.LOCATION file using notepad)
+ECHO Please select the program you would like to be run when your shell program is closed (if you would like to add launch paramaters you can open the CLOSED.LOCATION file using notepad)
 rem BrowseFiles
 ECHO|set /p=%result%>CLOSED.LOCATION
 goto Start
 
 :Set-Shell
-call %MYFILES%\set-Shell.bat
+call C:\Motion-Shell\Settings\set-Shell.bat
 goto Start
-
-
-:Module
-Start C:\Motion-Shell\Motion-Settings.exe
-goto end
-
 
 
 :end

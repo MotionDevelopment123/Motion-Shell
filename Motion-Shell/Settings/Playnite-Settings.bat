@@ -1,7 +1,7 @@
 @ECHO OFF
 :Start
 CD C:\Motion-Shell\Playnite
-type %MYFILES%\Header.txt
+type C:\Motion-Shell\Settings\Header.txt
 ECHO.
 ECHO.
 ECHO Playnite settings
@@ -12,7 +12,7 @@ ECHO.
 ECHO 2. FFPLAY.exe Location
 type C:\Motion-Shell\Playnite\FFPLAY.LOCATION
 ECHO.
-ECHO 3. Set as current shell
+ECHO 3. Change Shell
 ECHO.
 ECHO The following 2 options only apply to the Splash version
 ECHO.
@@ -32,7 +32,7 @@ if "%op%"=="6" goto end
 
 :PLAYNITELOCATION
 CLS
-type %MYFILES%\Header.txt
+type C:\Motion-Shell\Settings\Header.txt
 ECHO.
 ECHO.
 ECHO Please select your Playnite installation folder
@@ -41,9 +41,10 @@ ECHO|set /p=%result%>Playnite.LOCATION
 ECHO Playnite install folder set to: %result%
 ECHO.
 ECHO.
+CLS & goto Start
 :FFPLAYLOCATION
 CLS
-type %MYFILES%\Header.txt
+type C:\Motion-Shell\Settings\Header.txt
 ECHO.
 ECHO.
 ECHO Please select your FFPLAY.exe Location
@@ -55,10 +56,10 @@ ECHO.
 ECHO FFPLAY.exe set to: %result%
 ECHO.
 ECHO.
-
+CLS & goto Start
 :SIZE
 CLS
-type %MYFILES%\Header.txt
+type C:\Motion-Shell\Settings\Header.txt
 ECHO.
 ECHO.
 ECHO Screen size:
@@ -75,10 +76,10 @@ ECHO.
 ECHO size set to: %WIDTH% X %HEIGHT%
 ECHO.
 ECHO.
-
+CLS & goto Start
 :SPLASHVIDEO
 CLS
-type %MYFILES%\Header.txt
+type C:\Motion-Shell\Settings\Header.txt
 ECHO.
 ECHO.
 ECHO Splash Video
@@ -91,10 +92,9 @@ ECHO Video set to: %result%
 ECHO.
 ECHO.
 goto misc
-
+CLS & goto Start
 :Set-Shell
-call %MYFILES%\set-Shell.bat
-goto Start
-
+call C:\Motion-Shell\Settings\set-Shell.bat
+goto end
 :end
 Exit

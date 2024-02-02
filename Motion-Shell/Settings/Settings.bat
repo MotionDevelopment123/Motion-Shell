@@ -28,8 +28,8 @@ REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Header.txt
 REM BFCPEOPTIONEND
 @ECHO OFF
 :Welcome
-type %MYFILES%\Header.txt
-CD C:\Motion-Shell\
+type C:\Motion-Shell\Settings\Header.txt
+CD C:\Motion-Shell\Settings
 set /p op=<CURRENT.OPTION
 if "%op%"=="Steam" goto Steam
 if "%op%"=="Playnite-Splash" goto Playnite-Splash
@@ -38,22 +38,22 @@ if "%op%"=="Custom" goto Custom
 
 :Steam
 CLS
-Call %MYFILES%\Steam-Settings.bat
+Call C:\Motion-Shell\Settings\Steam-Settings.bat
 GOTO end
 
 :Playnite-Splash
 CLS
-Call %MYFILES%\Playnite-Splash-Settings.bat
+Call C:\Motion-Shell\Settings\Playnite-Splash-Settings.bat
 GOTO end
 
 :Playnite
 CLS
-Call %MYFILES%\Playnite-Settings.bat
+Call C:\Motion-Shell\Settings\Playnite-Settings.bat
 GOTO end
 
 :custom
 CLS
-Call %MYFILES%\Custom-Settings.bat
+Call C:\Motion-Shell\Settings\Custom-Settings.bat
 GOTO end
 
 :end

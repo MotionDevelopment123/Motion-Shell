@@ -1,9 +1,9 @@
 @ECHO OFF
-CD C:\Motion-Shell\
+CD C:\Motion-Shell\Settings\
 set /p CURRENT=<CURRENT.OPTION
 ECHO The shell is currently set to %CURRENT%
 ECHO.
-ECHO Please select which module you would like to set as the shell, if you have not installed the module using the original installer and selecting the modile please do that first, each module installed using the installer will be set and can later be switched between different modules using this option.
+ECHO Please select which module you would like to set as the shell.
 ECHO.
 ECHO.
 ECHO 1. Steam
@@ -35,6 +35,7 @@ START C:\Motion-Shell\Motion-Settings.exe
 goto end
 
 :Playnite
+CD C:\Motion-Shell\Playnite
 set /p=PLAYNITE<PLAYNITE.LOCATION
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "%PLAYNITE%" /f
 set /p CURRENT=Playnite
