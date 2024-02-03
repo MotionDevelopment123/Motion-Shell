@@ -1,7 +1,7 @@
 @ECHO OFF
 REM BFCPEOPTIONSTART
 REM Advanced BAT to EXE Converter www.BatToExeConverter.com
-REM BFCPEEXE=C:\Shared Folder\GitHub\Motion-Shell\Settings\Motion-Settings.exe
+REM BFCPEEXE=C:\Shared Folder\GitHub\Motion-Shell\Motion-Shell\Settings\Motion-Settings.exe
 REM BFCPEICON=
 REM BFCPEICONINDEX=-1
 REM BFCPEEMBEDDISPLAY=0
@@ -19,11 +19,6 @@ REM BFCPEDISABLEQE=0
 REM BFCPEWINDOWHEIGHT=30
 REM BFCPEWINDOWWIDTH=120
 REM BFCPEWTITLE=Motion-Settings
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Settings\Custom-Settings.bat
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Settings\Playnite-Settings.bat
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Settings\set-Shell.bat
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Settings\Settings.bat
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Settings\Steam-Settings.bat
 REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Setup\Header.txt
 REM BFCPEOPTIONEND
 @ECHO OFF
@@ -32,28 +27,22 @@ type C:\Motion-Shell\Settings\Header.txt
 CD C:\Motion-Shell\Settings
 set /p op=<CURRENT.OPTION
 if "%op%"=="Steam" goto Steam
-if "%op%"=="Playnite-Splash" goto Playnite-Splash
 if "%op%"=="Playnite" goto Playnite
 if "%op%"=="Custom" goto Custom
 
 :Steam
 CLS
-Call C:\Motion-Shell\Settings\Steam-Settings.bat
-GOTO end
-
-:Playnite-Splash
-CLS
-Call C:\Motion-Shell\Settings\Playnite-Splash-Settings.bat
+START C:\Motion-Shell\Settings\Steam-Settings.exe
 GOTO end
 
 :Playnite
 CLS
-Call C:\Motion-Shell\Settings\Playnite-Settings.bat
+START C:\Motion-Shell\Settings\Playnite-Settings.exe
 GOTO end
 
 :custom
 CLS
-Call C:\Motion-Shell\Settings\Custom-Settings.bat
+START C:\Motion-Shell\Settings\Custom-Settings.exe
 GOTO end
 
 :end

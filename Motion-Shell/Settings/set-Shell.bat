@@ -1,4 +1,5 @@
 @ECHO OFF
+CLS
 CD C:\Motion-Shell\Settings\
 set /p CURRENT=<CURRENT.OPTION
 ECHO The shell is currently set to %CURRENT%
@@ -29,7 +30,7 @@ goto end
 
 :Playnite-Splash
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "C:\Motion-Shell\Playnite\Motion-Shell.exe" /f
-set /p CURRENT=Playnite-Splash
+set /p CURRENT=Playnite
 ECHO|set /p=%CURRENT%>CURRENT.OPTION
 START C:\Motion-Shell\Motion-Settings.exe
 goto end
