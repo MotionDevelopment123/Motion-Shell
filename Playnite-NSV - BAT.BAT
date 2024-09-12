@@ -56,9 +56,7 @@ ECHO Installing...
 ECHO.
 ECHO.
 
-set /p PLAYNITE=<PLAYNITE.LOCATION
-
-reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "%PLAYNITE%\Playnite.FullscreenApp.exe" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "%result%\Playnite.FullscreenApp.exe" /f
 
 ECHO Select the number of the option that applys to you
 ECHO 1 Default installation
