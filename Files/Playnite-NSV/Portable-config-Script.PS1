@@ -14,7 +14,7 @@ else{
         }
         else
         {
-            #DESKTOPmode
+            # DESKTOPmode
         }
     
  }'

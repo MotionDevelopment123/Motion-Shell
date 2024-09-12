@@ -19,14 +19,6 @@ REM BFCPEDISABLEQE=0
 REM BFCPEWINDOWHEIGHT=30
 REM BFCPEWINDOWWIDTH=120
 REM BFCPEWTITLE=Motion-Shell Setup
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Header.txt
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\config-Script.PS1
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\FFPLAY.LOCATION
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\Motion-Shell.exe
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\PLAYNITE.LOCATION
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\SCREENSIZE.PIXELS
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\VIDEO.LOCATION
-REM BFCPEEMBED=C:\Shared Folder\GitHub\Motion-Shell\Playnite\Windows-Shell.exe
 REM BFCPEOPTIONEND
 @ECHO OFF
 type %MYFILES%\Header.txt
