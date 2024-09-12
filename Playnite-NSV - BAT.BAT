@@ -13,7 +13,7 @@ copy .\Files\Playnite-NSV\Windows-Shell.exe %temp%\Motion-Shell
 copy .\Files\Playnite-NSV\Default-Config-Script.ps1 %temp%\Motion-Shell
 copy .\Files\Playnite-NSV\Portable-Config-Script.ps1 %temp%\Motion-Shell
 copy .\Files\Playnite-NSV\PLAYNITE.LOCATION %temp%\Motion-Shell
-copy .\Files\txt\Header.txt %temp%\Motion-Shell
+copy .\txt\Header.txt %temp%\Motion-Shell
 
 @ECHO OFF
 rem Creating folders and copying required files from temp
@@ -39,7 +39,7 @@ ECHO Set your playnite installation location
 ECHO.
 ECHO By default this is C:\Users\%USERNAME%\AppData\Local\Playnite but may be different if you selected to change location or used the portable install option during setup.
 ECHO Please do not use quotation marks ("")
-Set /p Playniteloc=Enter your playnite installation location:
+Set /p result=Enter your playnite installation location:
 ECHO|set /p=%result%>Playnite.LOCATION
 ECHO Playnite install folder set to: %result%
 ECHO.
@@ -60,8 +60,12 @@ set /p PLAYNITE=<PLAYNITE.LOCATION
 
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "%PLAYNITE%\Playnite.FullscreenApp.exe" /f
 
-IF "%Installtype%="Default" goto Defaultinst
-IF "%Installtype%="Portable" goto Portableinst
+ECHO Select the number of the option that applys to you
+ECHO 1 Default installation
+ECHO 2 Portable Installation
+set /p Installtype=Please select your install type:
+IF "%Installtype%"=="1" goto Defaultinst
+IF "%Installtype%"=="2" goto Portableinst
 
 :Defaultinst
 powershell.exe -noprofile -executionpolicy bypass -file %temp%\Motion-Shell\Default-config-Script.ps1
@@ -90,7 +94,7 @@ goto complete
 
 :complete
 rem removing temp folder and offering for user to logout.
-RMDIR /S /Q %temp%\Motion-Shell
+RMDIR /s /q %temp%\Motion-Shell
 ECHO Would you like to logout now to use the new shell?
 set /p logoutop=Y/N:
 IF "%logoutop%"=="Y" goto logout
