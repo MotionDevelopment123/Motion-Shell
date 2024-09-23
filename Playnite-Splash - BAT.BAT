@@ -17,6 +17,7 @@ copy .\Files\Playnite-Splash\FFPLAY.LOCATION %temp%\Motion-Shell
 copy .\Files\Playnite-Splash\SCREENSIZE.PIXELS %temp%\Motion-Shell
 copy .\Files\Playnite-Splash\VIDEO.LOCATION %temp%\Motion-Shell
 copy .\txt\Header.txt %temp%\Motion-Shell
+set Header=%temp%\Motion-Shell\Header.txt
 
 @ECHO OFF
 rem Creating folders and copying required files from temp
@@ -48,10 +49,17 @@ ECHO Please do not use quotation marks ("")
 Set /p result=Enter your playnite installation location:
 ECHO|set /p=%result%>Playnite.LOCATION
 CLS
+type %temp%\Motion-Shell\Header.txt
+ECHO.
+ECHO.
 ECHO Playnite install folder set to: %result%
 ECHO.
 ECHO.
 
+CLS
+type %temp%\Motion-Shell\Header.txt
+ECHO.
+ECHO.
 ECHO Set your FFPLAY.exe location
 ECHO.
 ECHO FFPLAY.EXE can be downloaded from: https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip
@@ -61,6 +69,39 @@ Set /p result=Enter your FFPLAY.exe installation location:
 ECHO|set /p=%result%>FFPLAY.LOCATION
 CLS
 ECHO FFPLAY.exe location set to: %result%
+
+CLS
+type %MYFILES%\Header.txt
+ECHO.
+ECHO.
+ECHO Screen size:
+ECHO.
+ECHO width (in pixels)
+set /p WIDTH=eg 1920:
+ECHO.
+ECHO Height (in pixels)
+set /p HEIGHT=eg 1080:
+ECHO.
+set /p SIZE=-x %WIDTH% -y %HEIGHT%
+ECHO|set /p=%SIZE%>SCREENSIZE.PIXELS
+ECHO.
+ECHO size set to: %WIDTH% X %HEIGHT%
+ECHO.
+ECHO.
+CLS
+
+CLS
+type %Header%
+ECHO.
+ECHO.
+ECHO Splash Video
+ECHO.
+set /p VIDEO=Video location:
+ECHO|set /p=%VIDEO%>VIDEO.LOCATION
+ECHO.
+ECHO Video set to: %VIDEO%
+ECHO.
+ECHO.
 
 REM need to add the remainging from here
 
